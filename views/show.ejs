@@ -1,0 +1,48 @@
+<% include partials/header %>
+<div class="jumbotron">
+    <ul>
+        <li><%= budget.name%></li>
+        <li><%= budget.budgetType%></li>
+    </ul>
+</div>
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-4">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <span class="badge">$<%=budget.yearlySalary%></span>
+                    <h5>Yearly Salary</h5>
+                </li><li class="list-group-item">
+                    <span class="badge">$100</span>
+                    <h5>Monthly Salary</h5>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <span class="badge">$100</span>
+                    <h5>Put away for retirement</h5>
+                </li>
+                <li class="list-group-item">
+                    <span class="badge">$100</span>
+                    <h5>Rainy day fund</h5>
+                </li>
+                <li class="list-group-item">
+                    <span class="badge">$100</span>
+                    <h5>Play money</h5>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <span class="badge">$100</span>
+                    <h5>Monthly Expenses</h5>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer %>
