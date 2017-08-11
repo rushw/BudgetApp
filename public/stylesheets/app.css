@@ -1,0 +1,21 @@
+.thumbnail img{
+    width:100%;
+}
+
+.thumbnail{
+    padding: 0;
+    border: 0;
+}
+
+input[type="text"]{
+    width: 100%;
+}
+
+.text-box {
+    padding: 0 20px;
+    border: solid 1px #000000;
+}
+
+.new{
+    margin-top: 100px;
+}

@@ -49,15 +49,6 @@ app.post("/budget/", function(req, res){
            console.log("Budget Created");
            console.log(createdBudget.budgetType);
            res.redirect("/budget/" + createdBudget._id);
-           // if (createdBudget.budgetType == "stg"){
-           //     res.redirect("/budget/" + createdBudget._id);
-           // }
-           // if (createdBudget.budgetType == "ltg"){
-           //     res.redirect("/budget");
-           // }
-           // if (createdBudget.budgetType == "i"){
-           //     res.redirect("/budget");
-           // }
        }
     });
 });
