@@ -1,19 +1,28 @@
 <% include partials/header %>
-<div class="jumbotron">
-    <ul>
-        <li><%= budget.name%></li>
-        <li><%= budget.budgetType%></li>
-    </ul>
+<div class="well well-sm container">
+    <link rel="stylesheet" href="../models/person.js">
+    <p>
+        <h3 class="nameLeft"><%=person.name%></h3>
+        <%if (person.budgetType == "stg"){%>
+        <h3 class="budgetRight">Budget for short term goals</h3>
+        <%}%>
+        <%if (person.budgetType == "ltg"){%>
+        <h3 class="budgetRight">Budget for long term goals</h3>
+        <%}%>
+        <%if (person.budgetType == "i"){%>
+        <h3 class="budgetRight">Budget for investors</h3>
+        <%}%>
+    </p>
 </div>
-<div class="jumbotron">
+<div class="container">
     <div class="row">
         <div class="col-md-4">
             <ul class="list-group">
                 <li class="list-group-item">
-                    <span class="badge">$<%=budget.yearlySalary%></span>
+                    <span class="badge">$<%=person.yearlySalary%></span>
                     <h5>Yearly Salary</h5>
                 </li><li class="list-group-item">
-                    <span class="badge">$100</span>
+                    <span class="badge">$<%=person.budget.monthlySalary%></span>
                     <h5>Monthly Salary</h5>
                 </li>
             </ul>
@@ -21,15 +30,15 @@
         <div class="col-md-4">
             <ul class="list-group">
                 <li class="list-group-item">
-                    <span class="badge">$100</span>
+                    <span class="badge">$<%=person.budget.monthlyRetirement%></span>
                     <h5>Put away for retirement</h5>
                 </li>
                 <li class="list-group-item">
-                    <span class="badge">$100</span>
+                    <span class="badge">$<%=person.budget.rainyDay%></span>
                     <h5>Rainy day fund</h5>
                 </li>
                 <li class="list-group-item">
-                    <span class="badge">$100</span>
+                    <span class="badge">$<%=person.budget.playMoney%></span>
                     <h5>Play money</h5>
                 </li>
             </ul>
@@ -37,7 +46,7 @@
         <div class="col-md-4">
             <ul class="list-group">
                 <li class="list-group-item">
-                    <span class="badge">$100</span>
+                    <span class="badge">$<%=person.budget.monthlyExpenses%></span>
                     <h5>Monthly Expenses</h5>
                 </li>
             </ul>

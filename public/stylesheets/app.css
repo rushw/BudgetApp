@@ -19,3 +19,16 @@ input[type="text"]{
 .new{
     margin-top: 100px;
 }
+
+.nameLeft{
+    float: left;
+    width: 50%;
+    padding-left: 10px;
+}
+
+.budgetRight{
+    text-align: right;
+    float: right;
+    width: 50%;
+    padding-right: 10px;
+}
