@@ -20,6 +20,6 @@ if __name__ == '__main__':
                               'rainyDay': budget.rainyDay})
     print(budget_json)
     sys.stdout.flush()
-    url = 'http://localhost:3000/python/info'
-    headers = {"Accept": "application/json"}
-    response = requests.get(url, data=budget_json)
+#    url = 'http://localhost:3000/python/info'
+#    headers = {"Accept": "application/json"}
+#    response = requests.get(url, data=budget_json)
