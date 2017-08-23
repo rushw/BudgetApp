@@ -34,6 +34,7 @@ app.get("/budget", function(req,res){
     process.stdout.on('data', function (data){
         // console.log(data.toString('utf8'));
         // console.log(JSON.parse(data));
+        console.log(req.query.budgetType)
         var budget = JSON.parse(data);
         var person = new Person(req.query.name, req.query.yearlySalary, req.query.budgetType, budget);
         res.locals.person = person;
@@ -44,7 +45,8 @@ app.get("/budget", function(req,res){
 app.post("/budget/", function(req, res){
     var name = req.body.name;
     var yearlySalary = req.body.yearlySalary;
-    var budgetType = req.body.budgetType;
+    var budgetType = req.query.type;
+
     res.redirect("/budget/?name=" + name + "&yearlySalary=" + yearlySalary + "&budgetType=" + budgetType);
 });
 
